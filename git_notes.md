@@ -14,17 +14,18 @@ git commit -m "new feature"
 - [Delete the last commit that was pushed to the remote](https://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html)
 
 ```
-\# git interprets x^ as the parent of x and + as a forced non-fastforward push
+# git interprets x^ as the parent of x and + as a forced non-fastforward push
 git push <remote> +HEAD^:<branch>
 
-\# Alternative
+# Alternative
 git reset HEAD^ --hard
 git push <remote> -f
 ```
 - [Rebase feature branch onto main branch](https://stackoverflow.com/questions/7929369/how-to-rebase-local-branch-onto-remote-master)
+
 ```
-\# Ensure that your local feature-branch is up to date with the remote feature-branch
-\# and no one else is working on the branch with uncommitted changes
+# Ensure that your local feature-branch is up to date with the remote feature-branch
+# and no one else is working on the branch with uncommitted changes
 
 git checkout main
 git pull <remote> main
