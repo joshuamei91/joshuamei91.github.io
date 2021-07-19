@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Git Notes
-permalink: /git-notes/
+title: Git
+permalink: /git-cheatsheet/
 ---
+
+# Git Cheatsheet
 
 ## Common workflows
 - Save changes to a new branch
