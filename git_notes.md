@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Git
+title: Git Cheatsheet
 permalink: /git-cheatsheet/
 ---
-
-# Git Cheatsheet
 
 ## Common workflows
 - Save changes to a new branch

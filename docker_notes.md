@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Docker
+title: Docker Cheatsheet
 permalink: /docker-cheatcheet/
 ---
-
-# Docker Cheatsheet
 
 ## Common workflows
 - Run with specific env file and mount volume
