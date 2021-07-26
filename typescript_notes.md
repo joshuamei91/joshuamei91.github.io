@@ -78,7 +78,8 @@ if (isFish(pet)) {
   pet.fly();
 }
 ```
-
+### Exclude property from type
+`Omit<T, 'property1'|'property2'>`
 
 ### Truthiness
 
