@@ -7,22 +7,28 @@ permalink: /docker-cheatcheet/
 ## Common workflows
 - Run with specific env file and mount volume
 
-```
-docker run -d \
-  --name mycontainer
-  --env-file <path to env file> \
-  -p hostport:containerport \
-  --mount type=bind,source=<absolute path to source dir>,target=/path/in/container \
-  --network <network name> \
-  --restart=unless-stopped 
-  xyz/myimage:tag
-```
+  ```
+  docker run -d \
+    --name mycontainer
+    --env-file <path to env file> \
+    -p hostport:containerport \
+    --mount type=bind,source=<absolute path to source dir>,target=/path/in/container \
+    --network <network name> \
+    --restart=unless-stopped 
+    xyz/myimage:tag
+  ```
 
 - Execute an interactive bash shell on the container
 
-```
-docker exec -it <container> bash
-```
+  ```
+  docker exec -it <container> bash
+  ```
+  
+- Check logs between a time period
+  ```
+  docker logs --since 1h --until 30m
+  docker logs --since 2013-01-02T13:23:37+08:00 --until 2013-01-02T14:23:37+08:00
+  ```
 
 ## Images
 
