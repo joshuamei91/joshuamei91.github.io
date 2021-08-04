@@ -19,6 +19,16 @@ permalink: /aws-cheatcheet/
   - `aws s3 ls s3://mybucket/sub/path`
   - `aws s3 ls s3://mybucket --human-readable --summarize`
 - [Get object](https://docs.aws.amazon.com/cli/latest/reference/s3api/get-object.html): `aws s3api get-object --bucket mybucket --key myobject`
+- Add CA to S3 in Node.js
+  ``` node
+  s3 = new AWS.s3({
+    httpOptions: {
+      agent: new https.Agent({
+        ca: fs.readFileSync('/path/to/ca.crt')
+      })
+    }
+  })
+  ```
 
 ### Troubleshooting
 
