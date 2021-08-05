@@ -4,6 +4,13 @@ title: Kubernetes Notes
 permalink: /kube-cheatcheet/
 ---
 
+## Introspection and Debugging
+
+- Describe the pod: `kubectl describe pod <pod-name>`
+- Get events: 
+  - `kubectl get events --namespace=mynamespace`
+  - `kubectl get events --all-namespaces`
+  
 ## Volume mount
 ### Empty directory
 ``` yaml
