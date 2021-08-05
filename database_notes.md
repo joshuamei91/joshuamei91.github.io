@@ -4,6 +4,11 @@ title: Database
 permalink: /db/
 ---
 
+## MongoDB
+
+- Find distinct values: `db.inventory.distinct( "item.field", { queryKey: "queryValue" } )`
+- Find records that are in the list: `db.collection.find( { _id : { $in : [1,2,3,4] } } )`;
+
 ## SQL
 
 - [How does database indexing work](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
