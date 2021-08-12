@@ -64,8 +64,34 @@ permalink: /linux-cheatcheet/
   # CentOS 6 & 7
   python -c 'import yum, json; yb = yum.YumBase(); print json.dumps(yb.conf.yumvar, indent=2)'
   ```
+
+### User/Permissions management
+- [Create user](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/): `useradd -m -u <uid> -g <group> <username>` (`-m`: create home dir)
+  > To login after creating user, change user password (below)
+- Change own password: `passwd`, change someone else's password: `passwd <username>`
+- Check user database: `cat /etc/passwd`
+- [Create user group](https://www.geeksforgeeks.org/groupadd-command-in-linux-with-examples/): `groupadd <groupname>`
+- [Change file permissions](https://kb.iu.edu/d/abdb): eg. `chmod a+rwx myfile`
+  | Access class| Operator   | Access Type | 
+  | ----------- | -----------| ----------- |
+  | u (user)    | + (add)    | r (read)    |
+  | g (group)   | - (remove) | w (write)   |
+  | o (other)   | = (exact)  | x (execute) |
+  | a (all)
+- [Change file owner](https://linuxize.com/post/linux-chown-command/): eg. `chown <username> myfile` or `chown -R <username> DIRECTORY`
+
+### Network
+- [List open ports](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/): `netstat -tulpn | grep LISTEN`
   
 ### SFTP ([ref](https://docs.oracle.com/cd/E36784_01/html/E36830/remotehowtoaccess-15.html))
 - Copy file from remote directory to local directory: `get myfile`
 - Copy file from local directory to remote directory: `put myfile`
 - Delete file from remote directory: `delete myfile`
+
+### Others
+- Add executable to path: add executable binary or create symlinks in `/usr/local/bin`
+- Get detailed info about files: `ls -l` or `ll` (alias for `ls -l`)
+
+## Concepts
+
+- [SELinux](https://www.redhat.com/en/topics/linux/what-is-selinux)
