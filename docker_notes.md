@@ -111,3 +111,9 @@ Run a command in a running container: `docker exec [OPTIONS] <container> <comman
 ## Dockerfile
 
 ## Docker compose
+
+### Running services
+- Run services from specific compose file: `docker-compose -f some-docker-compose.yaml up -d`
+- Run one service with dependencies across multiple compose files: `docker-compose -f some-compose-1.yaml some-compose-2.yaml up -d <service name>`
+  > Note: docker-compose will automatically start the services that `<service name>` depends on
+- Stop services: `docker-compose -f some-docker-compose.yaml down -v`
