@@ -37,15 +37,34 @@ permalink: /python-cheatcheet/
     return max(left_d, right_d)
   return height(root, 0)
   ```
+- Find midpoint of linked list - two pointer method
+  ``` python
+  p1, p2 = head, head
+  while p2.next and p2.next.next:
+    p1 = p1.next
+    p2 = p2.next.next
+  # p1 will be at the midpoint
+
+  # odd nodes: 1 -> 2 (p1) -> 3 (p2)
+  # even nodes: 1 -> 2 (p1) -> 3 (p2) -> 4
+  ```
 
 ## Sorting
-- Sort list using sublist element: `sub_li.sort(key = lambda x: x[1], reverse: True)`
 - Bubble sort
   ``` python
   for i in range(len(array)):
     for j in range(len(array)-i-1):
       if (array[j] > array[j+1]):
         array[j], array[j+1] = array[j+1], array[j]
+  ```
+- Merge sort for linked list: https://www.geeksforgeeks.org/merge-sort-for-linked-list/
+- Custom comparator for sorted (Python 3):
+  ``` python
+  def compare(item1, item2):
+    return fn(item1) - fn(item2)
+
+  from functools import cmp_to_key
+  sortedList = sorted(mylist, key=cmp_to_key(compare))
   ```
 
 ## Searching
@@ -70,6 +89,9 @@ permalink: /python-cheatcheet/
 - Reverse the list in-place: `list.reverse()`
 - Make a copy of the reversed list: `list[::-1]`
 - Join items in list: `','.join(list) -> string`
+- Sort list using sublist element: `sub_li.sort(key = lambda x: x[1], reverse: True)`
+- Remove first occurrence of item: `list.remove(item)`
+- Remove item at index `i` (removes last item when index is not given): `list.pop(i)`
 
 ## String
 - Remove leading and trailing whitespace (returns new string): `string.strip()`
@@ -77,7 +99,22 @@ permalink: /python-cheatcheet/
 - Remove trailing (right) whitespace (returns new string): `string.rstrip()`
 - Check if string contains only alphabets: `string.isalpha()`
 - Check if string contains only digits: `string.isdigit()`
+- Find distance between two characters (`ord` returns acsii code): `ord('z') - ord('a')`
+- Convert ascii code back to character: `chr(ascii_value)`
+
+## Dictionary
+- Remove key from dict: `del dict[key]`
+- Remove key and get removed value: `dict.pop(key, default_value_if_key_doesnt_exist)`
+- Get key with max value: `max(stats, key=stats.get)`
+
+## Tree
+- Find diameter of binary tree: https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
 
 ## Arithmetic
 - Integer division operator (divide and keep whole number component): `num // 10`
+- Multiply two arrays elementwise: `[a*b for a,b in zip(listA, listB)]`
+- Find HCF (GCD) of two numbers: `math.gcd(x,y)`
+- Initialise infinity integer: `float('inf)` or `float('-inf') or math.inf`
 
+## Set
+- Add to a set: `set.add(item)`
