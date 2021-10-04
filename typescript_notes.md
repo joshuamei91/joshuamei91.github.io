@@ -120,7 +120,11 @@ async function printFiles () {
   }));
 }
 ```
-
+### Use variable as key of object
+``` typescript
+  // Use the square bracket to evaluate the value of the variable
+  const someObj = {[variable]: "some value"}
+```
 
 ### [@ symbol in import](https://stackoverflow.com/questions/42711175/what-does-the-symbol-do-in-javascript-imports)
 > Refers to the root of the project and it is usually configured in the .babelrc of the babel plugin

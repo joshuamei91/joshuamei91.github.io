@@ -90,6 +90,7 @@ permalink: /python-cheatcheet/
 - Make a copy of the reversed list: `list[::-1]`
 - Join items in list: `','.join(list) -> string`
 - Sort list using sublist element: `sub_li.sort(key = lambda x: x[1], reverse: True)`
+- Sort list using 2 keys: `sortedList = sorted(unsortedList, key=lambda x: (x[0], x[1]))`
 - Remove first occurrence of item: `list.remove(item)`
 - Remove item at index `i` (removes last item when index is not given): `list.pop(i)`
 
@@ -106,6 +107,7 @@ permalink: /python-cheatcheet/
 - Remove key from dict: `del dict[key]`
 - Remove key and get removed value: `dict.pop(key, default_value_if_key_doesnt_exist)`
 - Get key with max value: `max(stats, key=stats.get)`
+- [Time complexity](https://stackoverflow.com/questions/17539367/python-dictionary-keys-in-complexity) of `in` operator for dict: `O(1)`
 
 ## Tree
 - Find diameter of binary tree: https://www.geeksforgeeks.org/diameter-of-a-binary-tree/
@@ -118,3 +120,10 @@ permalink: /python-cheatcheet/
 
 ## Set
 - Add to a set: `set.add(item)`
+
+# Bitwise operations
+- Right shift a number by n bits: `num >>= n`
+- Bitwise AND: `num1 & num2`
+
+## Counter `from collections import Counter`
+- Counter is a subclass of dict. Can use `counter.items()` to loop through Counter result
